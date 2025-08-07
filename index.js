@@ -21,9 +21,15 @@ app.use(bodyParser.json());
 
 
 app.get('/', (req, res) => {
-    const secret = Math.floor(Math.random() * 100)
-    res.json({ secret })
+    // const secret = Math.floor(Math.random() * 100)
+    res.json({ name: "/api1" })
 });
+app.get('/2', (req, res) => {
+    // const secret = Math.floor(Math.random() * 100)
+    res.json({ name:"/api2" })
+});
+
+
 app.post("/contact", async (req, res) => {
     const { name, email, phone, subject, message } = req.body;
 
