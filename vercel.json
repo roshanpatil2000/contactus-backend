@@ -6,10 +6,18 @@
             "use": "@vercel/node"
         }
     ],
-    
-  "rewrites": [
-    { "source": "/", "destination": "/api/index" },
-    { "source": "/2", "destination": "/api/api2" }
-  ]
-
+    "rewrites": [
+        {
+            "source": "/",
+            "destination": "/api/index"
+        },
+        {
+            "source": "/2",
+            "destination": "/api/two"
+        },
+        {
+            "source": "/contact",
+            "destination": "/api/contact"
+        }
+    ]
 }
