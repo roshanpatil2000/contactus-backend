@@ -18,11 +18,9 @@ app.use(bodyParser.json());
 
 // app.use("/", contactRoutes);
 
-app.get("/", (req, res) => {
-    res.json({ data: { id: 1 }, message: { stateCode: 200, } })
-});
 
-app.get('/secret', (req, res) => {
+
+app.get('/', (req, res) => {
     const secret = Math.floor(Math.random() * 100)
     res.json({ secret })
 });
