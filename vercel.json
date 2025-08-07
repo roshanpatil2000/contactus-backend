@@ -5,5 +5,11 @@
             "src": "index.js",
             "use": "@vercel/node"
         }
-    ]
+    ],
+    
+  "rewrites": [
+    { "source": "/", "destination": "/api/index" },
+    { "source": "/2", "destination": "/api/api2" }
+  ]
+
 }
