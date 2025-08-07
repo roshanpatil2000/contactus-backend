@@ -14,9 +14,18 @@ app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 // Routes
-app.get("/", (req, res) => res.send("Express on Vercel"));
+// app.get("/", (req, res) => res.send("Express on Vercel"));
 
-app.use("/", contactRoutes);
+// app.use("/", contactRoutes);
+
+app.get("/", (req, res) => {
+    res.json({ data: { id: 1 }, message: { stateCode: 200, } })
+});
+
+app.get('/secret', (req, res) => {
+    const secret = Math.floor(Math.random() * 100)
+    res.json({ secret })
+});
 
 // Start Server
 app.listen(PORT, () => {
